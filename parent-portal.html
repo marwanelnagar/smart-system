@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بوابة ولي الأمر | نظام التيسير الذكي</title>
+<style>
+:root{--green:#123f32;--green2:#23745b;--gold:#d5b36c;--bg:#f4f7f3;--line:#e0e9e2}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at 10% 0,#e3f0e7,transparent 36%),var(--bg);color:#19372e}
+.wrap{max-width:1040px;margin:auto;padding:22px}.top{background:linear-gradient(125deg,#103b30,#27775c);color:white;border-radius:26px;padding:30px;position:relative;overflow:hidden}.top:after{content:"۞";position:absolute;left:24px;top:-34px;font-size:170px;color:#ffffff12}
+.tag{display:inline-block;border:1px solid #ffffff55;border-radius:30px;padding:7px 12px;font-size:13px}.top h1{margin:18px 0 8px;font-size:clamp(27px,5vw,40px)}.top p{line-height:1.9;max-width:660px;color:#e3f0e8}
+.card{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;margin-top:18px;box-shadow:0 12px 35px #143f3010}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{background:#f3f8f4;border-radius:15px;padding:14px}.step b{display:block;margin-bottom:7px;color:var(--green2)}.muted{color:#687b71;font-size:13px;line-height:1.8}
+label{display:block;font-size:14px;font-weight:bold;margin:12px 0 7px}input{width:100%;padding:13px;border:1px solid #d4e1d8;border-radius:12px;font:inherit;background:#fff}input:focus{outline:2px solid #b5d8c5;border-color:var(--green2)}
+button{font:inherit;font-weight:bold;border:0;border-radius:12px;padding:13px 16px;background:var(--green2);color:white;cursor:pointer}button.alt{background:#e9f3ec;color:var(--green)}button:disabled{opacity:.5;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.notice{background:#fff8e7;color:#755a1c;padding:13px;border-radius:12px;font-size:13px;line-height:1.8}.hidden{display:none!important}#status{white-space:pre-wrap;line-height:1.8}.footer{text-align:center;color:#718178;font-size:12px;padding:20px}
+@media(max-width:650px){.wrap{padding:12px}.top{padding:23px}.steps,.grid{grid-template-columns:1fr}.card{padding:17px}}
+</style></head><body><div class="wrap">
+<header class="top"><span class="tag">بوابة الأسرة • نظام التيسير الذكي</span><h1>متابعة ابنك في حلقة القرآن</h1><p>قدّم طلب ربط حساب ولي الأمر بملف ابنك باستخدام كود الطالب الذي تستلمه من الشيخ. لن تظهر بيانات الطالب إلا بعد مراجعة الطلب والموافقة عليه.</p></header>
+<section class="card"><h2>كيف تبدأ؟</h2><div class="steps"><div class="step"><b>١ — بيانات ولي الأمر</b><span class="muted">اكتب رقم هاتفك المسجل لديك.</span></div><div class="step"><b>٢ — كود الطالب</b><span class="muted">أدخل الكود الذي سلّمه لك الشيخ.</span></div><div class="step"><b>٣ — موافقة الشيخ</b><span class="muted">بعد الموافقة، يُربط الحساب بملف الطالب.</span></div></div></section>
+<section class="card"><h2>دخول ولي الأمر / طلب ربط جديد</h2><p class="muted">استخدم رقم الهاتف بصيغة دولية، مثل ‎+2010xxxxxxxx. حماية الحساب أهم من حفظ كلمة المرور في ملف الطالب.</p>
+<div class="grid"><div><label for="phone">رقم هاتف ولي الأمر</label><input id="phone" type="tel" autocomplete="tel" placeholder="+2010xxxxxxxx"></div><div><label for="code">كود الطالب الذي أعطاك إياه الشيخ</label><input id="code" autocomplete="off" placeholder="مثال: TYS-4821"></div></div>
+<div class="actions"><button id="request">إرسال طلب الربط</button><button id="login" class="alt">لدي حساب بالفعل</button></div>
+<div id="existing" class="hidden"><label for="loginPhone">رقم الهاتف</label><input id="loginPhone" type="tel" placeholder="+2010xxxxxxxx"><div id="recaptcha"></div><button id="sendSms" style="margin-top:12px">إرسال رمز SMS للدخول</button><label for="sms">رمز SMS</label><input id="sms" inputmode="numeric" maxlength="6" placeholder="الرمز المكوّن من 6 أرقام"><button id="verifySms" style="margin-top:10px">تأكيد الرمز</button></div>
+<p id="status" class="muted" role="status" aria-live="polite">ملاحظة: واجهة البوابة جاهزة مبدئيًا؛ لن تُرسل طلبات أو تعرض سجلات حقيقية حتى ربطها بخدمات التحقق والموافقة الآمنة.</p>
+<div class="notice">لا تكتب كلمة مرورك في مكان عام ولا تشارك رمز SMS. لا ينبغي تخزين كلمة المرور كنص داخل بيانات الطالب؛ يجب أن تديرها خدمة تسجيل الدخول الآمنة.</div>
+</section><div class="footer">نظام التيسير الذكي • بوابة ولي الأمر</div></div>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import {getAuth,RecaptchaVerifier,signInWithPhoneNumber} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+const firebaseConfig={apiKey:"AIzaSyAI4MGTrHQuXk74eXI-YhjxoeZ21kyaBuc",authDomain:"altayseer-smart-system.firebaseapp.com",projectId:"altayseer-smart-system",storageBucket:"altayseer-smart-system.firebasestorage.app",messagingSenderId:"218235395174",appId:"1:218235395174:web:7759c7c86cdb29565621a7"};
+const auth=getAuth(initializeApp(firebaseConfig));let verifier=null,confirmation=null;
+const $=id=>document.getElementById(id);$("login").onclick=()=>$("existing").classList.toggle("hidden");
+$("request").onclick=()=>{$("status").textContent="واجهة الطلب جاهزة، لكن إنشاء طلب حقيقي يتطلب نشر Cloud Function تتحقق من كود الطالب وتربط الطلب بانتظار موافقة الشيخ. لم يتم إرسال طلب حتى الآن."};
+$("sendSms").onclick=async()=>{try{if(!verifier)verifier=new RecaptchaVerifier(auth,"recaptcha",{});confirmation=await signInWithPhoneNumber(auth,$("loginPhone").value.trim(),verifier);$("status").textContent="تم طلب إرسال SMS. أكمل الرمز إذا وصلتك الرسالة."}catch(e){$("status").textContent="لم يُرسل الرمز: "+e.message;try{verifier?.clear()}catch{}verifier=null}};
+$("verifySms").onclick=async()=>{try{if(!confirmation)throw new Error("اطلب رمز SMS أولًا.");await confirmation.confirm($("sms").value.trim());$("status").textContent="تم التحقق من الهاتف، لكن ربط حساب ولي الأمر بالطالب يحتاج إكمال موافقة الشيخ على الخادم."}catch(e){$("status").textContent="تعذر تأكيد الرمز: "+e.message}};
+</script></body></html>
