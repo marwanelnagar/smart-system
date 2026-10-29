@@ -8,6 +8,8 @@
 - لا تحذف قاعدة البيانات أو تغيّر مسارات الطلاب الحالية؛ التطبيق ما زال يستخدم `users/{uid}/students/{studentId}`.
 
 ## نشر وظائف البريد
+بعد نشر التحديثات، تشمل الوظائف المطلوبة `sendRegistrationEmailOtp` و`verifyRegistrationEmailOtp` و`completeRegistrationEmailVerification`، بالإضافة إلى `sendEmailOtp` و`verifyEmailOtp` المستخدمتين لإكمال التحقق للحسابات الموجودة.
+
 يحتاج نشر Cloud Functions عادةً إلى خطة فوترة مناسبة في Firebase/Google Cloud. قبل النشر:
 1. فعّل Cloud Functions وApp Check واضبط التطبيق على وضع المراقبة أولًا أثناء الاختبار.
 2. من بيئة موثوقة لنشر Firebase Functions، ثبّت اعتماديات مجلد `functions` ثم انشر الوظائف.
