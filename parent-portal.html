@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>بوابة ولي الأمر | نظام التيسير الذكي</title>
+<title>بوابة ولي الأمر | نظام النجار الذكي</title>
 <style>
 :root{--green:#123f32;--green2:#23745b;--gold:#d5b36c;--bg:#f4f7f3;--line:#e0e9e2}
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at 10% 0,#e3f0e7,transparent 36%),var(--bg);color:#19372e}
@@ -11,7 +11,7 @@ label{display:block;font-size:14px;font-weight:bold;margin:12px 0 7px}input{widt
 button{font:inherit;font-weight:bold;border:0;border-radius:12px;padding:13px 16px;background:var(--green2);color:white;cursor:pointer}button.alt{background:#e9f3ec;color:var(--green)}button:disabled{opacity:.5;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.notice{background:#fff8e7;color:#755a1c;padding:13px;border-radius:12px;font-size:13px;line-height:1.8}.hidden{display:none!important}#status{white-space:pre-wrap;line-height:1.8}.footer{text-align:center;color:#718178;font-size:12px;padding:20px}
 @media(max-width:650px){.wrap{padding:12px}.top{padding:23px}.steps,.grid{grid-template-columns:1fr}.card{padding:17px}}
 </style></head><body><div class="wrap">
-<header class="top"><span class="tag">بوابة الأسرة • نظام التيسير الذكي</span><h1>متابعة ابنك في حلقة القرآن</h1><p>قدّم طلب ربط حساب ولي الأمر بملف ابنك باستخدام كود الطالب الذي تستلمه من الشيخ. لن تظهر بيانات الطالب إلا بعد مراجعة الطلب والموافقة عليه.</p></header>
+<header class="top"><span class="tag">بوابة الأسرة • نظام النجار الذكي</span><h1>متابعة ابنك في حلقة القرآن</h1><p>قدّم طلب ربط حساب ولي الأمر بملف ابنك باستخدام كود الطالب الذي تستلمه من الشيخ. لن تظهر بيانات الطالب إلا بعد مراجعة الطلب والموافقة عليه.</p></header>
 <section class="card"><h2>كيف تبدأ؟</h2><div class="steps"><div class="step"><b>١ — بيانات ولي الأمر</b><span class="muted">اكتب رقم هاتفك المسجل لديك.</span></div><div class="step"><b>٢ — كود الطالب</b><span class="muted">أدخل الكود الذي سلّمه لك الشيخ.</span></div><div class="step"><b>٣ — موافقة الشيخ</b><span class="muted">بعد الموافقة، يُربط الحساب بملف الطالب.</span></div></div></section>
 <section class="card"><h2>دخول ولي الأمر / طلب ربط جديد</h2><p class="muted">استخدم رقم الهاتف بصيغة دولية، مثل ‎+2010xxxxxxxx. حماية الحساب أهم من حفظ كلمة المرور في ملف الطالب.</p>
 <div class="grid"><div><label for="phone">رقم هاتف ولي الأمر</label><input id="phone" type="tel" autocomplete="tel" placeholder="+2010xxxxxxxx"></div><div><label for="code">كود الطالب الذي أعطاك إياه الشيخ</label><input id="code" autocomplete="off" placeholder="مثال: TYS-4821"></div></div>
@@ -19,7 +19,7 @@ button{font:inherit;font-weight:bold;border:0;border-radius:12px;padding:13px 16
 <div id="existing" class="hidden"><label for="loginPhone">رقم الهاتف</label><input id="loginPhone" type="tel" placeholder="+2010xxxxxxxx"><div id="recaptcha"></div><button id="sendSms" style="margin-top:12px">إرسال رمز SMS للدخول</button><label for="sms">رمز SMS</label><input id="sms" inputmode="numeric" maxlength="6" placeholder="الرمز المكوّن من 6 أرقام"><button id="verifySms" style="margin-top:10px">تأكيد الرمز</button></div>
 <p id="status" class="muted" role="status" aria-live="polite">ملاحظة: واجهة البوابة جاهزة مبدئيًا؛ لن تُرسل طلبات أو تعرض سجلات حقيقية حتى ربطها بخدمات التحقق والموافقة الآمنة.</p>
 <div class="notice">لا تكتب كلمة مرورك في مكان عام ولا تشارك رمز SMS. لا ينبغي تخزين كلمة المرور كنص داخل بيانات الطالب؛ يجب أن تديرها خدمة تسجيل الدخول الآمنة.</div>
-</section><div class="footer">نظام التيسير الذكي • بوابة ولي الأمر</div></div>
+</section><div class="footer">نظام النجار الذكي • بوابة ولي الأمر</div></div>
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 import {getAuth,RecaptchaVerifier,signInWithPhoneNumber} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
